@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .more, .skills, .skills, .contact, footer{
+.about, .projects, .skills, .skills, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.more .serv-content,
+.projects .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -277,56 +277,104 @@ section .title::after{
     background: none;
 }
 
-/* more section styling */
-#more{
+/* projects section styling */
+#projects{
     background-color: #fff;
 }
-.more{
-    color:#fff;
-    background: #111;
+
+#h2title::after{
+    content: "My work";
 }
-#title{
-    color: #111;
-}
-.more .title::before{
+.projects .carousel .card{
     background: #222;
-}
-.more .title::after{
-    background: #fff;
-    content: "beyond work";
-}
-.more .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
     border-radius: 6px;
-    padding: 50px 25px;
-    margin: auto;
+    padding: 25px 35px;
+    text-align: center;
     height: 500px;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
-.more .serv-content .card:hover{
+.projects .carousel .card:hover{
     background: #c1502e;
 }
-.more .serv-content .card .box{
+.projects.carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
-.more .serv-content .card:hover .box{
+.projects.carousel .card:hover .box{
     transform: scale(1.05);
 }
-.more .serv-content .card i{
-    font-size: 50px;
-    color: #c1502e;
-    transition: color 0.3s ease;
-}
-.more .serv-content .card:hover i{
-    color: #fff;
-}
-.more .serv-content .card .text{
+.projects.carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+.projects.carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #c1502e;
+    transition: all 0.3s ease;
+}
+.projects.carousel .card:hover img{
+    border-color: #fff;
+}
+
+#carousel .card .box img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #c1502e;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#carousel .card .box img:hover{
+    border-width: 4px;
+    border-color: #000;
+}
+
+#carousel .card .box h3{
+    color: #fff;
+    margin-bottom: 30px;
+    font-family:"Kumbh Sans"
+}
+
+#carousel .card .box p{
+    color: #fff;
+    font-family: "Kumbh Sans"
+}
+
+#carousel .card .box a{
+    color: #fff;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #c1502e;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: #c1502e;
 }
 
 /* skills section styling */
@@ -606,7 +654,7 @@ footer span a:hover{
     .about .about-content .right{
         flex: 100%;
     }
-    .more .serv-content .card{
+    .projects .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -630,7 +678,7 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .more .serv-content .card{
+    .projects .serv-content .card{
         width: 100%;
     }
 }
