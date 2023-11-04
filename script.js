@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: [" a Project Manager,", " a Scrum Master,", " an Agile Coach."],
+        strings: [" A Project Manager,", " A Scrum Master,", " An Agile Coach."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: [" a Project Manager,", " a Scrum Master,", " an Agile Coach."],
+        strings: [" A Project Manager,", " A Scrum Master,", " An Agile Coach."],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
